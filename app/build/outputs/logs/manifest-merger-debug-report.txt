@@ -1,0 +1,197 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:2:1-53:12
+INJECTED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:2:1-53:12
+INJECTED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:2:1-53:12
+INJECTED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:2:1-53:12
+MERGED from [com.android.support:design:27.1.1] /Users/johannainggolan/Downloads/gradle-3.5/caches/transforms-1/files-1.1/design-27.1.1.aar/c513d8c3713f3ff565fb227b11cc7997/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:appcompat-v7:27.1.1] /Users/johannainggolan/Downloads/gradle-3.5/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/b3aea841e9a13180395bb5190fdbdd8c/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /Users/johannainggolan/Downloads/gradle-3.5/caches/transforms-1/files-1.1/constraint-layout-1.1.2.aar/e9e184e4094dd2dcb9ff7e4333f4995d/AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.volley:volley:1.1.0] /Users/johannainggolan/Downloads/gradle-3.5/caches/transforms-1/files-1.1/volley-1.1.0.aar/c26236e4f8d1fe8bade96040122f50f4/AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:support-v4:27.1.1] /Users/johannainggolan/Downloads/gradle-3.5/caches/transforms-1/files-1.1/support-v4-27.1.1.aar/98e2e48d3c977f4282708164cdfab5c5/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:recyclerview-v7:27.1.1] /Users/johannainggolan/Downloads/gradle-3.5/caches/transforms-1/files-1.1/recyclerview-v7-27.1.1.aar/e368e355a339bc10b1c9511d5884ca27/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:cardview-v7:27.1.1] /Users/johannainggolan/Downloads/gradle-3.5/caches/transforms-1/files-1.1/cardview-v7-27.1.1.aar/77ac8a5f7a394c20c538d6142fac9fe2/AndroidManifest.xml:17:1-22:12
+MERGED from [com.squareup.picasso:picasso:2.71828] /Users/johannainggolan/Downloads/gradle-3.5/caches/transforms-1/files-1.1/picasso-2.71828.aar/294d878cebad4771055ff8f31514d246/AndroidManifest.xml:2:1-14:12
+MERGED from [de.hdodenhof:circleimageview:2.2.0] /Users/johannainggolan/Downloads/gradle-3.5/caches/transforms-1/files-1.1/circleimageview-2.2.0.aar/d95ef22c54eac824b909a262a09990ab/AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:support-fragment:27.1.1] /Users/johannainggolan/Downloads/gradle-3.5/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/e010b128dde7a0eb57088b0ef85ef4d4/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /Users/johannainggolan/Downloads/gradle-3.5/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/743df65fb6d5603f9861c446eb096197/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:27.1.1] /Users/johannainggolan/Downloads/gradle-3.5/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/b4026ef019c9b5348ba3b0e178bda4a7/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:27.1.1] /Users/johannainggolan/Downloads/gradle-3.5/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/524b93c67235fb885613b3c4c0c168d4/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /Users/johannainggolan/Downloads/gradle-3.5/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/ce5fd3a725e5ab508f329738e64cf98f/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:transition:27.1.1] /Users/johannainggolan/Downloads/gradle-3.5/caches/transforms-1/files-1.1/transition-27.1.1.aar/9075db18a1175b75fb60b409f9a0da4c/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-media-compat:27.1.1] /Users/johannainggolan/Downloads/gradle-3.5/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/dacdb39100af4a0178b13933eae9af52/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:27.1.1] /Users/johannainggolan/Downloads/gradle-3.5/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/35acd859ccec50955f5778cd23fa25fc/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:exifinterface:27.1.0] /Users/johannainggolan/Downloads/gradle-3.5/caches/transforms-1/files-1.1/exifinterface-27.1.0.aar/2711c7e3b7e4aae7e32756233dff2c6f/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/johannainggolan/Downloads/gradle-3.5/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/f2204644a326dc5a45fc7d61caff1e1e/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/johannainggolan/Downloads/gradle-3.5/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/dfb14382e28872bb908aa4a934ed98b0/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/johannainggolan/Downloads/gradle-3.5/caches/transforms-1/files-1.1/runtime-1.1.0.aar/519505a8d74b0f8525eeb3259ef41634/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.0] /Users/johannainggolan/Downloads/gradle-3.5/caches/transforms-1/files-1.1/runtime-1.1.0.aar/92024d85b15a04cda6ba5d2826cb68e0/AndroidManifest.xml:17:1-22:12
+INJECTED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:2:1-53:12
+INJECTED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:2:1-53:12
+INJECTED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:2:1-53:12
+	package
+		ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:3:5-43
+		INJECTED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml
+		ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:2:1-53:12
+		INJECTED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml
+		ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:2:1-53:12
+		INJECTED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:2:11-69
+uses-permission#android.permission.INTERNET
+ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:5:5-67
+	android:name
+		ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:5:22-64
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:7:5-80
+	android:name
+		ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:7:22-77
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:8:5-81
+	android:name
+		ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:8:22-78
+uses-feature#android.hardware.camera.any
+ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:10:5-12:35
+	android:required
+		ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:12:9-32
+	android:name
+		ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:11:9-51
+uses-feature#android.hardware.camera.autofocus
+ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:13:5-15:36
+	android:required
+		ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:15:9-33
+	android:name
+		ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:14:9-57
+application
+ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:17:5-51:19
+MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /Users/johannainggolan/Downloads/gradle-3.5/caches/transforms-1/files-1.1/constraint-layout-1.1.2.aar/e9e184e4094dd2dcb9ff7e4333f4995d/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /Users/johannainggolan/Downloads/gradle-3.5/caches/transforms-1/files-1.1/constraint-layout-1.1.2.aar/e9e184e4094dd2dcb9ff7e4333f4995d/AndroidManifest.xml:9:5-20
+MERGED from [com.android.volley:volley:1.1.0] /Users/johannainggolan/Downloads/gradle-3.5/caches/transforms-1/files-1.1/volley-1.1.0.aar/c26236e4f8d1fe8bade96040122f50f4/AndroidManifest.xml:9:5-20
+MERGED from [com.android.volley:volley:1.1.0] /Users/johannainggolan/Downloads/gradle-3.5/caches/transforms-1/files-1.1/volley-1.1.0.aar/c26236e4f8d1fe8bade96040122f50f4/AndroidManifest.xml:9:5-20
+MERGED from [com.squareup.picasso:picasso:2.71828] /Users/johannainggolan/Downloads/gradle-3.5/caches/transforms-1/files-1.1/picasso-2.71828.aar/294d878cebad4771055ff8f31514d246/AndroidManifest.xml:7:5-12:19
+MERGED from [com.squareup.picasso:picasso:2.71828] /Users/johannainggolan/Downloads/gradle-3.5/caches/transforms-1/files-1.1/picasso-2.71828.aar/294d878cebad4771055ff8f31514d246/AndroidManifest.xml:7:5-12:19
+MERGED from [de.hdodenhof:circleimageview:2.2.0] /Users/johannainggolan/Downloads/gradle-3.5/caches/transforms-1/files-1.1/circleimageview-2.2.0.aar/d95ef22c54eac824b909a262a09990ab/AndroidManifest.xml:9:5-20
+MERGED from [de.hdodenhof:circleimageview:2.2.0] /Users/johannainggolan/Downloads/gradle-3.5/caches/transforms-1/files-1.1/circleimageview-2.2.0.aar/d95ef22c54eac824b909a262a09990ab/AndroidManifest.xml:9:5-20
+	android:supportsRtl
+		ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:22:9-35
+	android:label
+		ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:20:9-41
+	android:roundIcon
+		ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:21:9-54
+	android:icon
+		ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:19:9-43
+	android:allowBackup
+		ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:18:9-35
+	android:theme
+		ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:23:9-40
+activity#com.example.coba.els_connect.MainActivity
+ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:26:9-29:59
+	android:label
+		ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:28:13-45
+	android:theme
+		ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:29:13-56
+	android:name
+		ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:27:13-41
+activity#com.example.coba.els_connect.LoginActivity
+ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:32:9-40:20
+	android:theme
+		ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:34:13-56
+	android:name
+		ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:33:13-42
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:35:13-39:29
+action#android.intent.action.MAIN
+ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:36:17-69
+	android:name
+		ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:36:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:38:17-77
+	android:name
+		ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:38:27-74
+activity#com.example.coba.els_connect.RegisterActivity
+ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:42:9-44:58
+	android:theme
+		ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:44:13-56
+	android:name
+		ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:43:13-45
+activity#com.example.coba.els_connect.DetailKomentarActivity
+ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:46:9-69
+	android:name
+		ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:46:19-57
+meta-data#preloaded_fonts
+ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:48:9-50:57
+	android:resource
+		ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:50:13-54
+	android:name
+		ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:49:13-43
+uses-sdk
+INJECTED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml
+INJECTED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml
+MERGED from [com.android.support:design:27.1.1] /Users/johannainggolan/Downloads/gradle-3.5/caches/transforms-1/files-1.1/design-27.1.1.aar/c513d8c3713f3ff565fb227b11cc7997/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:27.1.1] /Users/johannainggolan/Downloads/gradle-3.5/caches/transforms-1/files-1.1/design-27.1.1.aar/c513d8c3713f3ff565fb227b11cc7997/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.1] /Users/johannainggolan/Downloads/gradle-3.5/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/b3aea841e9a13180395bb5190fdbdd8c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.1] /Users/johannainggolan/Downloads/gradle-3.5/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/b3aea841e9a13180395bb5190fdbdd8c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /Users/johannainggolan/Downloads/gradle-3.5/caches/transforms-1/files-1.1/constraint-layout-1.1.2.aar/e9e184e4094dd2dcb9ff7e4333f4995d/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /Users/johannainggolan/Downloads/gradle-3.5/caches/transforms-1/files-1.1/constraint-layout-1.1.2.aar/e9e184e4094dd2dcb9ff7e4333f4995d/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.volley:volley:1.1.0] /Users/johannainggolan/Downloads/gradle-3.5/caches/transforms-1/files-1.1/volley-1.1.0.aar/c26236e4f8d1fe8bade96040122f50f4/AndroidManifest.xml:7:5-43
+MERGED from [com.android.volley:volley:1.1.0] /Users/johannainggolan/Downloads/gradle-3.5/caches/transforms-1/files-1.1/volley-1.1.0.aar/c26236e4f8d1fe8bade96040122f50f4/AndroidManifest.xml:7:5-43
+MERGED from [com.android.support:support-v4:27.1.1] /Users/johannainggolan/Downloads/gradle-3.5/caches/transforms-1/files-1.1/support-v4-27.1.1.aar/98e2e48d3c977f4282708164cdfab5c5/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.1.1] /Users/johannainggolan/Downloads/gradle-3.5/caches/transforms-1/files-1.1/support-v4-27.1.1.aar/98e2e48d3c977f4282708164cdfab5c5/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.1.1] /Users/johannainggolan/Downloads/gradle-3.5/caches/transforms-1/files-1.1/recyclerview-v7-27.1.1.aar/e368e355a339bc10b1c9511d5884ca27/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.1.1] /Users/johannainggolan/Downloads/gradle-3.5/caches/transforms-1/files-1.1/recyclerview-v7-27.1.1.aar/e368e355a339bc10b1c9511d5884ca27/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:27.1.1] /Users/johannainggolan/Downloads/gradle-3.5/caches/transforms-1/files-1.1/cardview-v7-27.1.1.aar/77ac8a5f7a394c20c538d6142fac9fe2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:27.1.1] /Users/johannainggolan/Downloads/gradle-3.5/caches/transforms-1/files-1.1/cardview-v7-27.1.1.aar/77ac8a5f7a394c20c538d6142fac9fe2/AndroidManifest.xml:20:5-44
+MERGED from [com.squareup.picasso:picasso:2.71828] /Users/johannainggolan/Downloads/gradle-3.5/caches/transforms-1/files-1.1/picasso-2.71828.aar/294d878cebad4771055ff8f31514d246/AndroidManifest.xml:5:5-44
+MERGED from [com.squareup.picasso:picasso:2.71828] /Users/johannainggolan/Downloads/gradle-3.5/caches/transforms-1/files-1.1/picasso-2.71828.aar/294d878cebad4771055ff8f31514d246/AndroidManifest.xml:5:5-44
+MERGED from [de.hdodenhof:circleimageview:2.2.0] /Users/johannainggolan/Downloads/gradle-3.5/caches/transforms-1/files-1.1/circleimageview-2.2.0.aar/d95ef22c54eac824b909a262a09990ab/AndroidManifest.xml:5:5-7:41
+MERGED from [de.hdodenhof:circleimageview:2.2.0] /Users/johannainggolan/Downloads/gradle-3.5/caches/transforms-1/files-1.1/circleimageview-2.2.0.aar/d95ef22c54eac824b909a262a09990ab/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:support-fragment:27.1.1] /Users/johannainggolan/Downloads/gradle-3.5/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/e010b128dde7a0eb57088b0ef85ef4d4/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] /Users/johannainggolan/Downloads/gradle-3.5/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/e010b128dde7a0eb57088b0ef85ef4d4/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /Users/johannainggolan/Downloads/gradle-3.5/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/743df65fb6d5603f9861c446eb096197/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /Users/johannainggolan/Downloads/gradle-3.5/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/743df65fb6d5603f9861c446eb096197/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] /Users/johannainggolan/Downloads/gradle-3.5/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/b4026ef019c9b5348ba3b0e178bda4a7/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] /Users/johannainggolan/Downloads/gradle-3.5/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/b4026ef019c9b5348ba3b0e178bda4a7/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] /Users/johannainggolan/Downloads/gradle-3.5/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/524b93c67235fb885613b3c4c0c168d4/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] /Users/johannainggolan/Downloads/gradle-3.5/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/524b93c67235fb885613b3c4c0c168d4/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /Users/johannainggolan/Downloads/gradle-3.5/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/ce5fd3a725e5ab508f329738e64cf98f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /Users/johannainggolan/Downloads/gradle-3.5/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/ce5fd3a725e5ab508f329738e64cf98f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.1.1] /Users/johannainggolan/Downloads/gradle-3.5/caches/transforms-1/files-1.1/transition-27.1.1.aar/9075db18a1175b75fb60b409f9a0da4c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.1.1] /Users/johannainggolan/Downloads/gradle-3.5/caches/transforms-1/files-1.1/transition-27.1.1.aar/9075db18a1175b75fb60b409f9a0da4c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] /Users/johannainggolan/Downloads/gradle-3.5/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/dacdb39100af4a0178b13933eae9af52/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] /Users/johannainggolan/Downloads/gradle-3.5/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/dacdb39100af4a0178b13933eae9af52/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] /Users/johannainggolan/Downloads/gradle-3.5/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/35acd859ccec50955f5778cd23fa25fc/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] /Users/johannainggolan/Downloads/gradle-3.5/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/35acd859ccec50955f5778cd23fa25fc/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:exifinterface:27.1.0] /Users/johannainggolan/Downloads/gradle-3.5/caches/transforms-1/files-1.1/exifinterface-27.1.0.aar/2711c7e3b7e4aae7e32756233dff2c6f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:exifinterface:27.1.0] /Users/johannainggolan/Downloads/gradle-3.5/caches/transforms-1/files-1.1/exifinterface-27.1.0.aar/2711c7e3b7e4aae7e32756233dff2c6f/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/johannainggolan/Downloads/gradle-3.5/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/f2204644a326dc5a45fc7d61caff1e1e/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/johannainggolan/Downloads/gradle-3.5/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/f2204644a326dc5a45fc7d61caff1e1e/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/johannainggolan/Downloads/gradle-3.5/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/dfb14382e28872bb908aa4a934ed98b0/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/johannainggolan/Downloads/gradle-3.5/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/dfb14382e28872bb908aa4a934ed98b0/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/johannainggolan/Downloads/gradle-3.5/caches/transforms-1/files-1.1/runtime-1.1.0.aar/519505a8d74b0f8525eeb3259ef41634/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/johannainggolan/Downloads/gradle-3.5/caches/transforms-1/files-1.1/runtime-1.1.0.aar/519505a8d74b0f8525eeb3259ef41634/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] /Users/johannainggolan/Downloads/gradle-3.5/caches/transforms-1/files-1.1/runtime-1.1.0.aar/92024d85b15a04cda6ba5d2826cb68e0/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] /Users/johannainggolan/Downloads/gradle-3.5/caches/transforms-1/files-1.1/runtime-1.1.0.aar/92024d85b15a04cda6ba5d2826cb68e0/AndroidManifest.xml:20:5-44
+INJECTED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml
+INJECTED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml
+		ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml
+		ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml
+provider#com.squareup.picasso.PicassoProvider
+ADDED from [com.squareup.picasso:picasso:2.71828] /Users/johannainggolan/Downloads/gradle-3.5/caches/transforms-1/files-1.1/picasso-2.71828.aar/294d878cebad4771055ff8f31514d246/AndroidManifest.xml:8:9-11:40
+	android:authorities
+		ADDED from [com.squareup.picasso:picasso:2.71828] /Users/johannainggolan/Downloads/gradle-3.5/caches/transforms-1/files-1.1/picasso-2.71828.aar/294d878cebad4771055ff8f31514d246/AndroidManifest.xml:10:13-72
+	android:exported
+		ADDED from [com.squareup.picasso:picasso:2.71828] /Users/johannainggolan/Downloads/gradle-3.5/caches/transforms-1/files-1.1/picasso-2.71828.aar/294d878cebad4771055ff8f31514d246/AndroidManifest.xml:11:13-37
+	android:name
+		ADDED from [com.squareup.picasso:picasso:2.71828] /Users/johannainggolan/Downloads/gradle-3.5/caches/transforms-1/files-1.1/picasso-2.71828.aar/294d878cebad4771055ff8f31514d246/AndroidManifest.xml:9:13-64

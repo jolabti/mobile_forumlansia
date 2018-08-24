@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_height="match_parent">
+
+    <!--<android.support.v7.widget.Toolbar-->
+    <!--android:id="@+id/new_post_toolbar"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="#008b72"-->
+    <!--android:theme="@style/Base.ThemeOverlay.AppCompat.Dark.ActionBar"-->
+    <!--app:layout_constraintEnd_toEndOf="parent"></android.support.v7.widget.Toolbar>-->
+
+
+    <EditText
+        android:id="@+id/postingan"
+        android:layout_width="367dp"
+        android:layout_height="152dp"
+        android:layout_marginBottom="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="5dp"
+        android:background="@android:color/background_light"
+        android:hint="Masukkan posting anda"
+        android:inputType="textMultiLine" />
+
+    <ImageView
+        android:id="@+id/new_post_images"
+        android:layout_width="130dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="50dp"
+        android:contentDescription="imgupload"
+        app:srcCompat="@drawable/ic_menu_camera" />
+
+    <Button
+        android:id="@+id/post_btn"
+        android:layout_width="366dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="44dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:background="#008b72"
+        android:contentDescription="crtbtndsc"
+        android:padding="15dp"
+        android:text="POST"
+        android:textAllCaps="false"
+        android:textColor="@android:color/background_light"
+        android:textSize="18sp" />
+
+
+</LinearLayout>
