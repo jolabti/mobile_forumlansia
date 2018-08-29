@@ -379,7 +379,7 @@ public class ProfileFragment extends Fragment {
             }
 
             @Override
-            public void onResponse(okhttp3.Call call, okhttp3.Response response) throws IOException {
+            public void onResponse(okhttp3.Call call, okhttp3.Response response) {
 
                 if(response.isSuccessful()){
 
@@ -416,7 +416,7 @@ public class ProfileFragment extends Fragment {
             }
 
             @Override
-            public void onResponse(okhttp3.Call call, okhttp3.Response response) throws IOException {
+            public void onResponse(okhttp3.Call call, okhttp3.Response response) {
 
                 if (response.isSuccessful()){
 

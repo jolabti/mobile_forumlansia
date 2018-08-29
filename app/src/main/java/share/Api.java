@@ -11,6 +11,8 @@ public class Api {
 
     public static final String JSON_DO_POSTING= BASE_URL + "api/api_posting";
 
+    public static final String JSON_DO_REPLY_KOMENTAR= BASE_URL + "api/api_detail_komentar";
+
     public static final String JSON_SHOW_TOTAL_USER= BASE_URL + "api/api_get_total_user";
 
     public static final String JSON_SHOW_TOTAL_POSTING= BASE_URL + "api/api_get_total_posting";

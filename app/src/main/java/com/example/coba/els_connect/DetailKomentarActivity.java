@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -75,7 +76,7 @@ public class DetailKomentarActivity extends AppCompatActivity {
         btn_balas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                startRequestReply();
             }
         });
 
@@ -125,7 +126,7 @@ public class DetailKomentarActivity extends AppCompatActivity {
                         dcall.clear();
                         for (int i = 0; i < jarPost.length(); i++) {
                             dcpojo = new DC_POJO();
-                            Log.d("jarpostid", jarPost.getJSONObject(i).getString("post_id"));
+                            Log.d("jarpostid", jarPost.getJSONObject(i).toString());
 
                             dcpojo.setPost_id(jarPost.getJSONObject(i).getString("post_id"));
                             dcpojo.setPosting(jarPost.getJSONObject(i).getString("posting"));
@@ -168,19 +169,18 @@ public class DetailKomentarActivity extends AppCompatActivity {
     }
 
 
-    /*public void startRequestReply(){
+   public void startRequestReply(){
 
 
 
         final RequestBody requestBody = new FormBody.Builder()
-                .add(Param.POST_PIN, pin)
+                .add("komentar", ed_balas.getText().toString())
                 .build();
 
 
         final okhttp3.Request request = new okhttp3.Request.Builder()
-                .url(Param.API_PINCHECK)
+                .url(Api.JSON_DO_REPLY_KOMENTAR+"/1"+"/1")
                 .tag("REPLYKOMENTAR")
-                .addHeader("Authorization", "Bearer " + sessionManager.grabToken())
                 .addHeader("Content-Type","application/x-www-form-urlencoded")
                 .post(requestBody)
                 .cacheControl(CacheControl.FORCE_NETWORK)
@@ -195,13 +195,32 @@ public class DetailKomentarActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onResponse(Call call, Response response) throws IOException {
+            public void onResponse(Call call, Response response) {
+
+                if(response.isSuccessful()){
+
+
+                    new Handler(Looper.getMainLooper()).post(new Runnable() {
+                        @Override
+                        public void run() {
+
+                            Toast.makeText(getApplicationContext(),"Komentar berhasil diupload", Toast.LENGTH_SHORT).show();
+
+                            startRequestDetailKomentar(tampungID,passByPostingVariabel);
+
+                            ed_balas.setText("");
+
+                        }
+                    });
+
+
+                }
 
             }
         });
 
 
     }
-    */
+
 
 }

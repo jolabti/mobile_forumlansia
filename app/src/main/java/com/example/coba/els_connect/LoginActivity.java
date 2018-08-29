@@ -55,10 +55,10 @@ public class LoginActivity extends AppCompatActivity {
         }
 
 
-        edEmail = (EditText) findViewById(R.id.login_email);
-        edPassword = (EditText)findViewById(R.id.login_password);
-        btnLogin =(Button) findViewById(R.id.login_btn);
-        btnReg = (Button)findViewById(R.id.login_reg_btn);
+        edEmail = findViewById(R.id.login_email);
+        edPassword = findViewById(R.id.login_password);
+        btnLogin = findViewById(R.id.login_btn);
+        btnReg = findViewById(R.id.login_reg_btn);
 
 //
 

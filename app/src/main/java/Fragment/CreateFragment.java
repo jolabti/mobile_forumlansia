@@ -22,7 +22,9 @@ import android.support.annotation.Nullable;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
+import android.support.v4.content.FileProvider;
 import android.util.Base64;
+import android.util.Base64OutputStream;
 import android.util.Config;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -38,7 +40,9 @@ import com.example.coba.els_connect.R;
 import org.json.JSONObject;
 
 import java.io.ByteArrayOutputStream;
+import java.io.Closeable;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
@@ -46,6 +50,7 @@ import java.lang.reflect.Method;
 import java.net.URI;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Locale;
 
 import base.BaseOkHttpClient;
 import okhttp3.CacheControl;
@@ -59,13 +64,15 @@ import share.MarshMallowPermission;
 
 import static android.app.Activity.RESULT_OK;
 
+//https://android.jlelse.eu/androids-new-image-capture-from-a-camera-using-file-provider-dd178519a954
+
 public class CreateFragment extends Fragment {
 
     static final int REQUEST_IMAGE_CAPTURE = 100;
     private static final int CAPTURE_PICCODE = 989;
 
     private Bitmap mImageBitmap;
-    private String mCurrentPhotoPath;
+    private String imageFilePath;
     public String encodedImageplus;
     private ImageView mImageView;
     private String fileName = System.currentTimeMillis()+"";
@@ -111,47 +118,83 @@ public class CreateFragment extends Fragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        final String dir = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES) + "/picFolder/";
-        File newdir = new File(dir);
-        newdir.mkdirs();
 
         mImageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                openCameraIntent();
+            }
+        });
 
-                if (!marshMallowPermission.checkPermissionForExternalStorage()|| !marshMallowPermission.checkPermissionForCamera()) {
-                    marshMallowPermission.requestPermissionForExternalStorage(MarshMallowPermission.EXTERNAL_STORAGE_PERMISSION_REQUEST_CODE_BY_LOAD_PROFILE);
-                    marshMallowPermission.requestPermissionForCamera();
 
-//                    String file = fileName;
-//                    File newfile = new File(file);
-//                    try {
-//                        newfile.createNewFile();
-//                    }
-//                    catch (IOException e)
-//                    {
-//                    }
-//
-//                    Uri outputFileUri = Uri.fromFile(newfile);
-//                    Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-//                    intent.putExtra(MediaStore.EXTRA_OUTPUT, outputFileUri);
-//
-//                    startActivityForResult(intent,
-//                            REQUEST_IMAGE_CAPTURE);
 
-                    captureImage();
 
+
+    }
+
+
+    private void openCameraIntent() {
+
+        if(!marshMallowPermission.checkPermissionForExternalStorage()||!marshMallowPermission.checkPermissionForCamera()){
+
+            marshMallowPermission.checkPermissionForCamera();
+            marshMallowPermission.checkPermissionForExternalStorage();
+
+            Intent pictureIntent = new Intent(
+                    MediaStore.ACTION_IMAGE_CAPTURE
+            );
+            if(pictureIntent.resolveActivity(getActivity().getPackageManager()) != null) {
+
+                File photoFile = null;
+                try {
+                    photoFile = createImageFile();
+                } catch (IOException ex) {
+                    // Error occurred while creating the File
+                    ex.printStackTrace();
                 }
-            }
-        });
+                if (photoFile != null) {
+                    //Uri photoURI = FileProvider.getUriForFile(getActivity(),                                                                                                    "com.example.android.provider", photoFile);
+                    pictureIntent.putExtra(MediaStore.EXTRA_OUTPUT,
+                            Uri.fromFile(photoFile));
 
-        uploadPost.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                upload();
+
+
+                    startActivityForResult(pictureIntent,
+                            REQUEST_IMAGE_CAPTURE);
+                }
+
+
             }
 
-        });
+        }
+
+        else{
+
+            Intent pictureIntent = new Intent(
+                    MediaStore.ACTION_IMAGE_CAPTURE
+            );
+            if(pictureIntent.resolveActivity(getActivity().getPackageManager()) != null) {
+
+                File photoFile = null;
+                try {
+                    photoFile = createImageFile();
+                } catch (IOException ex) {
+                    // Error occurred while creating the File
+                    ex.printStackTrace();
+                }
+                if (photoFile != null) {
+                    Uri photoURI = FileProvider.getUriForFile(getActivity(),                                                                                                    "com.example.android.provider", photoFile);
+                    pictureIntent.putExtra(MediaStore.EXTRA_OUTPUT,
+                            photoURI);
+                    startActivityForResult(pictureIntent,
+                            REQUEST_IMAGE_CAPTURE);
+                }
+
+
+            }
+
+        }
+
 
 
     }
@@ -161,151 +204,98 @@ public class CreateFragment extends Fragment {
         if (requestCode == REQUEST_IMAGE_CAPTURE) {
             if (resultCode == Activity.RESULT_OK) {
 
-                Log.d("get_res","OKDONG");
-                setPic();
+                int targetW = mImageView.getWidth();
+                int targetH = mImageView.getHeight();
+
+                // Get the dimensions of the bitmap
+                BitmapFactory.Options bmOptions = new BitmapFactory.Options();
+                bmOptions.inJustDecodeBounds = true;
 
 
+                BitmapFactory.decodeFile(imageFilePath, bmOptions);
+                int photoW = bmOptions.outWidth;
+                int photoH = bmOptions.outHeight;
 
-//                Bitmap bmp = (Bitmap) data.getExtras().get("data");
-//                ByteArrayOutputStream stream = new ByteArrayOutputStream();
-//
-//                bmp.compress(Bitmap.CompressFormat.PNG, 100, stream);
-//                byte[] byteArray = stream.toByteArray();
-//
-//
-//
-//                Bitmap bitmap = BitmapFactory.decodeByteArray(byteArray, 0,
-//                        byteArray.length);
-//
-//                mImageView.setImageBitmap(bitmap);
+                // Determine how much to scale down the image
+                int scaleFactor = Math.min(photoW / targetW, photoH / targetH);
 
+                // Decode the image file into a Bitmap sized to fill the View
+                bmOptions.inJustDecodeBounds = false;
+                bmOptions.inSampleSize = scaleFactor;
+                bmOptions.inPurgeable = true;
 
+                Bitmap bitmap = BitmapFactory.decodeFile(imageFilePath, bmOptions);
+                mImageView.setImageBitmap(bitmap);
 
-
+                Log.d("resImagePath", imageFilePath);
+                Log.d("resBase64", convertToBase64(imageFilePath));
+               // Log.d("resBase64", convertToBase64cad(imageFilePath));
 
 
             }
         }
     }
 
-    private void captureImage() {
-        Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        // Ensure that there's a camera activity to handle the intent
-        if (takePictureIntent.resolveActivity(getActivity().getPackageManager()) != null) {
-            // Create the File where the photo should go
-            File photoFile = null;
-            try {
-                photoFile = createImageFile();
-            } catch (IOException ex) {
-                // Error occurred while creating the File
-                ex.printStackTrace();
-            }
-            // Continue only if the File was successfully created
-            if (photoFile != null) {
-                takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT,
-                        Uri.fromFile(photoFile));
-                startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
-            }
-        }
-    }
-
-    private File createImageFile() throws IOException {
-        // Create an image file name
-        String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
-        String imageFileName = fileName;
-        File storageDir = Environment.getExternalStoragePublicDirectory(
-                Environment.DIRECTORY_PICTURES);
-
-        File image = File.createTempFile(
-                imageFileName,  /* prefix */
-                ".png",         /* suffix */
-                storageDir      /* directory */
-        );
-
-        // Save a file: path for use with ACTION_VIEW intents
-        mCurrentPhotoPath = image.getAbsolutePath();
-        Log.e("Getpath", "Cool" + mCurrentPhotoPath.trim());
-        return image;
-    }
-
-    private void setPic() {
-        // Get the dimensions of the View
-        int targetW = mImageView.getWidth();
-        int targetH = mImageView.getHeight();
-
-        // Get the dimensions of the bitmap
-        BitmapFactory.Options bmOptions = new BitmapFactory.Options();
-        bmOptions.inJustDecodeBounds = true;
-        BitmapFactory.decodeFile(mCurrentPhotoPath, bmOptions);
-        int photoW = bmOptions.outWidth;
-        int photoH = bmOptions.outHeight;
-
-        // Determine how much to scale down the image
-        int scaleFactor = Math.min(photoW / targetW, photoH / targetH);
-
-        // Decode the image file into a Bitmap sized to fill the View
-        bmOptions.inJustDecodeBounds = false;
-        bmOptions.inSampleSize = scaleFactor;
-        bmOptions.inPurgeable = true;
-
-        Bitmap bitmap = BitmapFactory.decodeFile(mCurrentPhotoPath, bmOptions);
-        mImageView.setImageBitmap(bitmap);
-    }
-
-
-    private void upload() {
-//        Bitmap bm = BitmapFactory.decodeFile(mCurrentPhotoPath);
-//        ByteArrayOutputStream bao = new ByteArrayOutputStream();
-//        bm.compress(Bitmap.CompressFormat.JPEG, 100, bao);
-//        byte[] ba = bao.toByteArray();
-//
-//        encodedImage = Base64.encodeToString(ba, Base64.DEFAULT);
-//
-//
-//        Log.d("cpth", mCurrentPhotoPath);
-//        Log.d("cpth_create_64", encodedImage);
-//        System.out.println(encodedImage);
-
-        startGoPosting("1");
-
-    }
-
-    private String convertToBase64(String imagePath)
+     private String convertToBase64(String imagePath)
 
     {
 
-//        BitmapFactory.Options options = new BitmapFactory.Options();
-//        options.inSampleSize=4;
-//
-//
-//        Bitmap bm = BitmapFactory.decodeFile(imagePath, options);
-        Bitmap bm = loadBitmapfromFile(imagePath);
-        Bitmap newBitmap = getResizedBitmap(bm, 500, 500);
-        //Bitmap newBitmap = getUbahBitmap(500, 400);
-        bm = null;
-        //Bitmap newBitmap = getResizedBitmap(bm, 600, 500);
 
+        Bitmap bm = loadBitmapfromFile(imagePath);
+       // Bitmap newBitmap = getResizedBitmap(bm, 800, 1800);
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         //bm.compress(Bitmap.CompressFormat.JPEG, 100, baos);
-        newBitmap.compress(Bitmap.CompressFormat.PNG, 100, baos);
+
+        //Bitmap resized = Bitmap.createScaledBitmap(bm, 800, 600, true);
+
+
+        bm.compress(Bitmap.CompressFormat.PNG, 100, baos);
         byte[] byteArrayImage = baos.toByteArray();
 
-        newBitmap = null;
-        baos = null;
 
-
-        encodedImage = Base64.encodeToString(byteArrayImage, Base64.NO_WRAP);
+        String encodedImage = Base64.encodeToString(byteArrayImage, Base64.NO_WRAP);
 
         return encodedImage;
 
     }
 
+
+//       private String convertToBase64cad(String imagePath)
+//
+//       {
+//
+//
+//           Bitmap bm = loadBitmapfromFile(imagePath);
+//           Bitmap newBitmap = getResizedBitmap(bm, 1200, 1200);
+//
+//           bm = null;
+//
+//           ByteArrayOutputStream baos = new ByteArrayOutputStream();
+//           newBitmap.compress(Bitmap.CompressFormat.PNG, 100, baos);
+//           byte[] byteArrayImage = baos.toByteArray();
+//
+//           newBitmap = null;
+//           baos = null;
+//
+//
+//           String encodedImage = Base64.encodeToString(byteArrayImage, Base64.NO_WRAP);
+//
+//           return encodedImage;
+//
+//       }
+
+
+
     private Bitmap loadBitmapfromFile(String imgPath) {
 
         BitmapFactory.Options options = new BitmapFactory.Options();
-        options.inSampleSize = 4;
+
+        options.inSampleSize = 50;
+        options.inPreferQualityOverSpeed=true;
+
 
         return BitmapFactory.decodeFile(imgPath, options);
+       // return BitmapFactory.decodeFile(imgPath);
 
     }
 
@@ -322,9 +312,72 @@ public class CreateFragment extends Fragment {
 
         // "RECREATE" THE NEW BITMAP
         Bitmap resizedBitmap = Bitmap.createBitmap(
-                bm, 0, 0, width, height, matrix, true);
+                bm, 0, 0, width, height, matrix, false);
         return resizedBitmap;
     }
+
+    private String readFileAsBase64String(String path) {
+        try {
+            InputStream is = new FileInputStream(path);
+            ByteArrayOutputStream baos = new ByteArrayOutputStream();
+            Base64OutputStream b64os = new Base64OutputStream(baos, Base64.NO_WRAP);
+            byte[] buffer = new byte[8192];
+            int bytesRead;
+            try {
+                while ((bytesRead = is.read(buffer)) > -1) {
+                    b64os.write(buffer, 0, bytesRead);
+                }
+                return baos.toString();
+            } catch (IOException e) {
+                Log.e("TAG_CRF", "Cannot read file " + path, e);
+                // Or throw if you prefer
+                return "";
+            } finally {
+                closeQuietly(is);
+                closeQuietly(b64os); // This also closes baos
+            }
+        } catch (FileNotFoundException e) {
+            Log.e("TAG_FNFOUND", "File not found " + path, e);
+            // Or throw if you prefer
+            return "";
+        }
+    }
+
+    private static void closeQuietly(Closeable closeable) {
+        try {
+            closeable.close();
+        } catch (IOException e) {
+        }
+    }
+
+
+
+
+
+    private File createImageFile() throws IOException {
+        String timeStamp =
+                new SimpleDateFormat("yyyyMMdd_HHmmss",
+                        Locale.getDefault()).format(new Date());
+        String imageFileName = "IMG_" + timeStamp + "_";
+//        File storageDir =
+//                getActivity().getExternalFilesDir(Environment.DIRECTORY_PICTURES);
+//
+        File storageDir =
+                getActivity().getExternalFilesDir(Environment.DIRECTORY_PICTURES);
+
+        File image = File.createTempFile(
+                fileName,  /* prefix */
+                ".png",         /* suffix */
+                storageDir      /* directory */
+        );
+
+
+
+        imageFilePath = image.getAbsolutePath();
+        Log.d("imageFilePath",imageFilePath);
+        return image;
+    }
+
 
 
     public void startGoPosting(String userId){
@@ -357,7 +410,7 @@ public class CreateFragment extends Fragment {
             }
 
             @Override
-            public void onResponse(Call call, Response response) throws IOException {
+            public void onResponse(Call call, Response response) {
 
                     if(response.isSuccessful()){
 

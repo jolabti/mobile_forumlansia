@@ -87,12 +87,12 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
         public ViewHolder(View itemView) {
             super(itemView);
 
-            cardView = (CardView) itemView.findViewById(R.id.main_post);
-            tv_name = (TextView)itemView.findViewById(R.id.post_username);
-            tv_posting = (TextView)itemView.findViewById(R.id.post_desc);
-            tv_date = (TextView)itemView.findViewById(R.id.post_date);
-            civ = (CircleImageView) itemView.findViewById(R.id.post_user_image);
-            post_image = (ImageView) itemView.findViewById(R.id.post_image);
+            cardView = itemView.findViewById(R.id.main_post);
+            tv_name = itemView.findViewById(R.id.post_username);
+            tv_posting = itemView.findViewById(R.id.post_desc);
+            tv_date = itemView.findViewById(R.id.post_date);
+            civ = itemView.findViewById(R.id.post_user_image);
+            post_image = itemView.findViewById(R.id.post_image);
 
         }
     }

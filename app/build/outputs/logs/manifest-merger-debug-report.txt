@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:2:1-53:12
-INJECTED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:2:1-53:12
-INJECTED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:2:1-53:12
-INJECTED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:2:1-53:12
+ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:2:1-57:12
+INJECTED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:2:1-57:12
+INJECTED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:2:1-57:12
+INJECTED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:2:1-57:12
 MERGED from [com.android.support:design:27.1.1] /Users/johannainggolan/Downloads/gradle-3.5/caches/transforms-1/files-1.1/design-27.1.1.aar/c513d8c3713f3ff565fb227b11cc7997/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:appcompat-v7:27.1.1] /Users/johannainggolan/Downloads/gradle-3.5/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/b3aea841e9a13180395bb5190fdbdd8c/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /Users/johannainggolan/Downloads/gradle-3.5/caches/transforms-1/files-1.1/constraint-layout-1.1.2.aar/e9e184e4094dd2dcb9ff7e4333f4995d/AndroidManifest.xml:2:1-11:12
@@ -26,20 +26,20 @@ MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/johannainggolan/
 MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/johannainggolan/Downloads/gradle-3.5/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/dfb14382e28872bb908aa4a934ed98b0/AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/johannainggolan/Downloads/gradle-3.5/caches/transforms-1/files-1.1/runtime-1.1.0.aar/519505a8d74b0f8525eeb3259ef41634/AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.0] /Users/johannainggolan/Downloads/gradle-3.5/caches/transforms-1/files-1.1/runtime-1.1.0.aar/92024d85b15a04cda6ba5d2826cb68e0/AndroidManifest.xml:17:1-22:12
-INJECTED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:2:1-53:12
-INJECTED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:2:1-53:12
-INJECTED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:2:1-53:12
+INJECTED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:2:1-57:12
+INJECTED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:2:1-57:12
+INJECTED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:2:1-57:12
 	package
 		ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:3:5-43
 		INJECTED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml
-		ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:2:1-53:12
+		ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:2:1-57:12
 		INJECTED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml
-		ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:2:1-53:12
+		ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:2:1-57:12
 		INJECTED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:2:11-69
@@ -55,20 +55,20 @@ uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
 ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:8:5-81
 	android:name
 		ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:8:22-78
-uses-feature#android.hardware.camera.any
-ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:10:5-12:35
+uses-feature#android.hardware.camera
+ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:10:5-11:35
 	android:required
-		ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:12:9-32
+		ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:11:9-32
 	android:name
-		ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:11:9-51
+		ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:10:19-57
 uses-feature#android.hardware.camera.autofocus
-ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:13:5-15:36
+ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:14:5-16:36
 	android:required
-		ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:15:9-33
+		ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:16:9-33
 	android:name
-		ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:14:9-57
+		ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:15:9-57
 application
-ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:17:5-51:19
+ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:18:5-55:19
 MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /Users/johannainggolan/Downloads/gradle-3.5/caches/transforms-1/files-1.1/constraint-layout-1.1.2.aar/e9e184e4094dd2dcb9ff7e4333f4995d/AndroidManifest.xml:9:5-20
 MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /Users/johannainggolan/Downloads/gradle-3.5/caches/transforms-1/files-1.1/constraint-layout-1.1.2.aar/e9e184e4094dd2dcb9ff7e4333f4995d/AndroidManifest.xml:9:5-20
 MERGED from [com.android.volley:volley:1.1.0] /Users/johannainggolan/Downloads/gradle-3.5/caches/transforms-1/files-1.1/volley-1.1.0.aar/c26236e4f8d1fe8bade96040122f50f4/AndroidManifest.xml:9:5-20
@@ -78,57 +78,57 @@ MERGED from [com.squareup.picasso:picasso:2.71828] /Users/johannainggolan/Downlo
 MERGED from [de.hdodenhof:circleimageview:2.2.0] /Users/johannainggolan/Downloads/gradle-3.5/caches/transforms-1/files-1.1/circleimageview-2.2.0.aar/d95ef22c54eac824b909a262a09990ab/AndroidManifest.xml:9:5-20
 MERGED from [de.hdodenhof:circleimageview:2.2.0] /Users/johannainggolan/Downloads/gradle-3.5/caches/transforms-1/files-1.1/circleimageview-2.2.0.aar/d95ef22c54eac824b909a262a09990ab/AndroidManifest.xml:9:5-20
 	android:supportsRtl
-		ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:22:9-35
+		ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:23:9-35
 	android:label
-		ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:20:9-41
+		ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:21:9-41
 	android:roundIcon
-		ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:21:9-54
+		ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:22:9-54
 	android:icon
-		ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:19:9-43
+		ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:20:9-43
 	android:allowBackup
-		ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:18:9-35
+		ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:19:9-35
 	android:theme
-		ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:23:9-40
+		ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:24:9-40
 activity#com.example.coba.els_connect.MainActivity
-ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:26:9-29:59
+ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:30:9-33:59
 	android:label
-		ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:28:13-45
+		ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:32:13-45
 	android:theme
-		ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:29:13-56
+		ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:33:13-56
 	android:name
-		ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:27:13-41
+		ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:31:13-41
 activity#com.example.coba.els_connect.LoginActivity
-ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:32:9-40:20
+ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:36:9-44:20
 	android:theme
-		ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:34:13-56
+		ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:38:13-56
 	android:name
-		ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:33:13-42
+		ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:37:13-42
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:35:13-39:29
+ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:39:13-43:29
 action#android.intent.action.MAIN
-ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:36:17-69
+ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:40:17-69
 	android:name
-		ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:36:25-66
+		ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:40:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:38:17-77
+ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:42:17-77
 	android:name
-		ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:38:27-74
+		ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:42:27-74
 activity#com.example.coba.els_connect.RegisterActivity
-ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:42:9-44:58
+ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:46:9-48:58
 	android:theme
-		ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:44:13-56
+		ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:48:13-56
 	android:name
-		ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:43:13-45
+		ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:47:13-45
 activity#com.example.coba.els_connect.DetailKomentarActivity
-ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:46:9-69
+ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:50:9-69
 	android:name
-		ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:46:19-57
+		ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:50:19-57
 meta-data#preloaded_fonts
-ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:48:9-50:57
+ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:52:9-54:57
 	android:resource
-		ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:50:13-54
+		ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:54:13-54
 	android:name
-		ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:49:13-43
+		ADDED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml:53:13-43
 uses-sdk
 INJECTED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/johannainggolan/Documents/Els_Connect/app/src/main/AndroidManifest.xml

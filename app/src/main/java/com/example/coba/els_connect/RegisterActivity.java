@@ -165,7 +165,7 @@ public class RegisterActivity extends AppCompatActivity {
 
                     else{
 
-                        lga.backgroundThreadShortToast(getApplicationContext(),gson.message);
+                        LoginActivity.backgroundThreadShortToast(getApplicationContext(),gson.message);
                     }
 
                 }

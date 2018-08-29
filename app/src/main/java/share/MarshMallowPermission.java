@@ -25,30 +25,18 @@ public class MarshMallowPermission {
 
     public boolean checkPermissionForExternalStorage(){
         int result = ContextCompat.checkSelfPermission(activity, Manifest.permission.WRITE_EXTERNAL_STORAGE);
-        if (result == PackageManager.PERMISSION_GRANTED){
-            return true;
-        } else {
-            return false;
-        }
+        return result == PackageManager.PERMISSION_GRANTED;
     }
 
     public boolean checkPermissionForCamera(){
         int result = ContextCompat.checkSelfPermission(activity, Manifest.permission.CAMERA);
-        if (result == PackageManager.PERMISSION_GRANTED){
-            return true;
-        } else {
-            return false;
-        }
+        return result == PackageManager.PERMISSION_GRANTED;
     }
 
     public boolean checkLocationPermission(){
 
         int result = ActivityCompat.checkSelfPermission(activity, Manifest.permission.ACCESS_FINE_LOCATION);
-        if (result == PackageManager.PERMISSION_GRANTED){
-            return true;
-        } else {
-            return false;
-        }
+        return result == PackageManager.PERMISSION_GRANTED;
     }
 
     public void requestPermissionForExternalStorage(int requestCode){
