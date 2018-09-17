@@ -50,7 +50,7 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
             @Override
             public void onClick(View v) {
                 Intent gotoDetailKomentar = new Intent(c, DetailKomentarActivity.class);
-                gotoDetailKomentar.putExtra("idkomentar", "1");
+                gotoDetailKomentar.putExtra("idposting", posts.get(position).getPos_id());
                 gotoDetailKomentar.putExtra("passbyposting", posts.get(position).getPosting());
                 c.startActivity(gotoDetailKomentar);
             }

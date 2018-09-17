@@ -64,7 +64,7 @@ public class DetailKomentarActivity extends AppCompatActivity {
         if (extras == null) {
             tampungID = null;
         } else {
-            tampungID = extras.getString("idkomentar");
+            tampungID = extras.getString("idposting");
             passByPostingVariabel = extras.getString("passbyposting");
 
             Log.d("cek_tampungID", tampungID);
@@ -84,12 +84,12 @@ public class DetailKomentarActivity extends AppCompatActivity {
     }
 
 
-    public void startRequestDetailKomentar(String idKomentar, String passByPosting) {
+    public void startRequestDetailKomentar(String idPosting, String passByPosting) {
 
         tv_pass_by_posting.setText(passByPosting);
 
         final okhttp3.Request request = new okhttp3.Request.Builder()
-                .url(Api.JSON_SHOW_DETAIL_KOMENTAR + "/" + idKomentar)
+                .url(Api.JSON_SHOW_DETAIL_KOMENTAR + "/" + idPosting)
                 .tag("DETAILKOMENTAR")
                 .addHeader("application/json", "charset=utf-8")
                 //.addHeader("Content-Type","application/x-www-form-urlencoded")
@@ -179,7 +179,7 @@ public class DetailKomentarActivity extends AppCompatActivity {
 
 
         final okhttp3.Request request = new okhttp3.Request.Builder()
-                .url(Api.JSON_DO_REPLY_KOMENTAR+"/1"+"/1")
+                .url(Api.JSON_DO_REPLY_KOMENTAR+"/1"+"/"+tampungID)
                 .tag("REPLYKOMENTAR")
                 .addHeader("Content-Type","application/x-www-form-urlencoded")
                 .post(requestBody)

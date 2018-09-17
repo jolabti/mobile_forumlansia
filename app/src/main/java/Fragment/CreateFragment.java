@@ -52,6 +52,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
+import Utils.SessionManager;
 import base.BaseOkHttpClient;
 import okhttp3.CacheControl;
 import okhttp3.Call;
@@ -86,6 +87,7 @@ public class CreateFragment extends Fragment {
     private static final int REQ_CAMERA = 22222;
     private static final int REQ_PERMISSION_CAMERA = 11111;
     MarshMallowPermission marshMallowPermission;
+    SessionManager sessionManager;
 
 
     public static CreateFragment newInstance(){
@@ -98,6 +100,7 @@ public class CreateFragment extends Fragment {
         super.onCreate(savedInstanceState);
         marshMallowPermission = new MarshMallowPermission(getActivity());
         filePhoto = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES), fileName);
+        sessionManager = new SessionManager(getActivity());
 
 
     }
@@ -123,6 +126,17 @@ public class CreateFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 openCameraIntent();
+            }
+        });
+
+        uploadPost.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                Log.d("haveUserId", sessionManager.getUserDetails().get("post_btn"));
+
+                startGoPosting("1");
+
+
             }
         });
 
@@ -384,10 +398,11 @@ public class CreateFragment extends Fragment {
 
 
         final RequestBody requestBody = new FormBody.Builder()
-                .add("image_encode", "sdfsfsdfsfsdfsdf")
+                .add("image_encode",  convertToBase64(imageFilePath).trim())
                 .add("theposting", edpostingan.getText().toString())
                 .build();
 
+        Log.d("stgp_encode", convertToBase64(imageFilePath).trim());
 
         final okhttp3.Request request = new okhttp3.Request.Builder()
                 .url(Api.JSON_DO_POSTING+"/"+userId)
@@ -422,6 +437,7 @@ public class CreateFragment extends Fragment {
                             public void run() {
                                 Toast.makeText(getActivity(), "Berhasil Posting", Toast.LENGTH_LONG).show();
                                 edpostingan.setText("");
+                                mImageView.setImageBitmap(null);
                             }
                         });
 
