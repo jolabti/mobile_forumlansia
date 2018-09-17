@@ -50,6 +50,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+
+
         postingFragment = PostingFragment.newInstance();
         aboutFragment = AboutFragment.newInstance();
         createFragment = CreateFragment.newInstance();
@@ -204,7 +206,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 
      public void setFragmentByPage(Fragment frg){
-         fab.setVisibility(View.INVISIBLE);
+
+         if(frg==createFragment){
+
+             fab.setVisibility(View.INVISIBLE);
+         }
+         else{
+
+             fab.setVisibility(View.VISIBLE);
+         }
          FragmentTransaction transaction = getFragmentManager().beginTransaction().setTransition( FragmentTransaction.TRANSIT_FRAGMENT_OPEN );
          transaction.replace(R.id.layout_main, frg);
          transaction.addToBackStack(null);
