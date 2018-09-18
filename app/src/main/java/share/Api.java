@@ -1,7 +1,8 @@
 package share;
 
 public class Api {
-    public static final String BASE_URL="http:/fl.jn-code.xyz/index.php/";
+   // public static final String BASE_URL="http:/fl.jn-code.xyz/index.php/";
+    public static final String BASE_URL="http:/belansia.jn-code.xyz/index.php/";
 
     public static final String JSON_SHOW_POSTING= BASE_URL + "api/api_get_posting";
 
@@ -11,7 +12,8 @@ public class Api {
 
     public static final String JSON_DO_POSTING= BASE_URL + "api/api_posting";
 
-    public static final String JSON_DO_REPLY_KOMENTAR= BASE_URL + "api/api_detail_komentar";
+    //public static final String JSON_DO_REPLY_KOMENTAR= BASE_URL + "api/api_detail_komentar";
+    public static final String JSON_DO_REPLY_KOMENTAR= BASE_URL + "api/api_komentar";
 
     public static final String JSON_SHOW_TOTAL_USER= BASE_URL + "api/api_get_total_user";
 

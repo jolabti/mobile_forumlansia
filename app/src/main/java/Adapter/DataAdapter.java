@@ -26,7 +26,7 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
 
 
 
-    public String linkGambar = "http://forumlansia.jn-code.xyz/assets/images/uploads/f4fa8c74bf06ab70a5e27258446a60d3_21-07-18.png";
+    public String linkGambar = "https://media.bareksa.com/cms/media/assets//image/2015/05/10003_10003f5d506af38a8c85322e897fde879be88_300_300_c.jpg";
     public DataAdapter( ArrayList<PostModel> posts, Context c) {
         this.posts = posts;
         this.c=c;
@@ -41,7 +41,15 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(DataAdapter.ViewHolder holder, final int position) {
+
+        holder.cardView.setBackgroundResource(position % 2 == 0 ? R.color.cardview_dark_background : R.color.cardview_light_background);
+
+
+
+
         holder.tv_name.setText(posts.get(position).getEmail());
+
+        Log.d("trace_posting",posts.get(position).getPosting());
         holder.tv_posting.setText(posts.get(position).getPosting());
         holder.tv_date.setText(posts.get(position).getWaktu());
 
@@ -59,8 +67,8 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
         //Log.d("myidmy",posts.get(position).getPos_id());
 
 
-
-        Picasso.get().load(linkGambar).into(holder.civ);
+        Log.d("trace_linkgambar", linkGambar);
+        //Picasso.get().load(linkGambar).into(holder.civ);
         Picasso.get().load(linkGambar).into(holder.post_image);
 
 
@@ -80,6 +88,7 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
         private TextView tv_name;
         private TextView tv_posting;
         private TextView tv_date;
+        private TextView tv_desc;
         private CircleImageView civ;
         private ImageView post_image;
         private CardView cardView;
@@ -91,7 +100,8 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
             tv_name = itemView.findViewById(R.id.post_username);
             tv_posting = itemView.findViewById(R.id.post_desc);
             tv_date = itemView.findViewById(R.id.post_date);
-            civ = itemView.findViewById(R.id.post_user_image);
+
+            //civ = itemView.findViewById(R.id.post_user_image);
             post_image = itemView.findViewById(R.id.post_image);
 
         }

@@ -33,12 +33,10 @@
     <ImageView
         android:id="@+id/new_post_images"
         android:layout_width="match_parent"
-        android:layout_margin="40dp"
-        android:scaleType="fitCenter"
+        android:layout_margin="20dp"
         android:padding="20dp"
-        android:layout_height="0dp"
+        android:layout_height="250dp"
         android:layout_gravity="center"
-        android:layout_weight="0.18"
         android:contentDescription="imgupload"
         app:srcCompat="@drawable/ic_menu_camera" />
 
@@ -51,8 +49,7 @@
         android:contentDescription="crtbtndsc"
         android:padding="15dp"
         android:text="POST"
-        android:layout_weight="0.001"
-        android:textAllCaps="false"
+         android:textAllCaps="false"
         android:textColor="@android:color/background_light"
         android:textSize="18sp" />
 

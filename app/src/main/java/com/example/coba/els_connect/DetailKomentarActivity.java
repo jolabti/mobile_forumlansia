@@ -172,14 +172,17 @@ public class DetailKomentarActivity extends AppCompatActivity {
    public void startRequestReply(){
 
 
-
+        Log.d("trace_tampungID",tampungID);
+        Log.d("trace_rpy_userid",sessionManager.getUserDetails().get("post_btnpost_btn"));
         final RequestBody requestBody = new FormBody.Builder()
                 .add("komentar", ed_balas.getText().toString())
                 .build();
 
 
         final okhttp3.Request request = new okhttp3.Request.Builder()
-                .url(Api.JSON_DO_REPLY_KOMENTAR+"/1"+"/"+tampungID)
+
+
+                .url(Api.JSON_DO_REPLY_KOMENTAR+"/"+ sessionManager.getUserDetails().get("post_btnpost_btn")+"/"+tampungID)
                 .tag("REPLYKOMENTAR")
                 .addHeader("Content-Type","application/x-www-form-urlencoded")
                 .post(requestBody)

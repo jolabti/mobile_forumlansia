@@ -132,9 +132,9 @@ public class CreateFragment extends Fragment {
         uploadPost.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Log.d("haveUserId", sessionManager.getUserDetails().get("post_btn"));
+                Log.d("trace_haveUserId", sessionManager.getUserDetails().get("post_btnpost_btn"));
 
-                startGoPosting("1");
+                startGoPosting(sessionManager.getUserDetails().get("post_btnpost_btn"));
 
 
             }
@@ -223,7 +223,7 @@ public class CreateFragment extends Fragment {
 
                 // Get the dimensions of the bitmap
                 BitmapFactory.Options bmOptions = new BitmapFactory.Options();
-                bmOptions.inJustDecodeBounds = true;
+                //bmOptions.inJustDecodeBounds = true;
 
 
                 BitmapFactory.decodeFile(imageFilePath, bmOptions);
@@ -235,8 +235,8 @@ public class CreateFragment extends Fragment {
 
                 // Decode the image file into a Bitmap sized to fill the View
                 bmOptions.inJustDecodeBounds = false;
-                bmOptions.inSampleSize = scaleFactor;
-                bmOptions.inPurgeable = true;
+                bmOptions.inSampleSize = 4;
+                //bmOptions.inPurgeable = true;
 
                 Bitmap bitmap = BitmapFactory.decodeFile(imageFilePath, bmOptions);
                 mImageView.setImageBitmap(bitmap);
@@ -254,22 +254,58 @@ public class CreateFragment extends Fragment {
 
     {
 
+//
+         Bitmap bmSource = loadBitmapfromFile(imagePath);
+//       // Bitmap newBitmap = getResizedBitmap(bm, 800, 1800);
+//        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+//        //bm.compress(Bitmap.CompressFormat.JPEG, 100, baos);
+//
+//        //Bitmap resized = Bitmap.createScaledBitmap(bm, 800, 600, true);
+//
+//
+//        bm.compress(Bitmap.CompressFormat.PNG, 100, baos);
+//        byte[] byteArrayImage = baos.toByteArray();
+//
+//
+//        String encodedImage = Base64.encodeToString(byteArrayImage, Base64.NO_WRAP);
+//
+//        return encodedImage.trim();
 
-        Bitmap bm = loadBitmapfromFile(imagePath);
-       // Bitmap newBitmap = getResizedBitmap(bm, 800, 1800);
+//
+//        Bitmap bmp = null;
+//        ByteArrayOutputStream bos = null;
+//        byte[] bt = null;
+//        String encodeString = null;
+//
+//            bmp = BitmapFactory.decodeFile(imagePath);
+//            bos = new ByteArrayOutputStream();
+//            bmp.compress(Bitmap.CompressFormat.PNG, 100, bos);
+//            bt = bos.toByteArray();
+//            encodeString = Base64.encodeToString(bt, Base64.DEFAULT);
+//
+//
+//            return encodeString;
+
+
+        BitmapFactory.Options options = new BitmapFactory.Options();
+        options.inSampleSize = 4;
+
+        Bitmap newBitmap = getResizedBitmap(bmSource, 300, 300);
+        Bitmap bm = newBitmap;
+
+
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
-        //bm.compress(Bitmap.CompressFormat.JPEG, 100, baos);
-
-        //Bitmap resized = Bitmap.createScaledBitmap(bm, 800, 600, true);
-
-
         bm.compress(Bitmap.CompressFormat.PNG, 100, baos);
         byte[] byteArrayImage = baos.toByteArray();
+        bm = null;
+        baos = null;
 
 
         String encodedImage = Base64.encodeToString(byteArrayImage, Base64.NO_WRAP);
 
-        return encodedImage;
+        Log.e("encodedimage", encodedImage);
+
+        return encodedImage.trim();
 
     }
 
@@ -303,13 +339,9 @@ public class CreateFragment extends Fragment {
     private Bitmap loadBitmapfromFile(String imgPath) {
 
         BitmapFactory.Options options = new BitmapFactory.Options();
-
-        options.inSampleSize = 50;
-        options.inPreferQualityOverSpeed=true;
-
+        options.inSampleSize = 4;
 
         return BitmapFactory.decodeFile(imgPath, options);
-       // return BitmapFactory.decodeFile(imgPath);
 
     }
 
@@ -398,11 +430,12 @@ public class CreateFragment extends Fragment {
 
 
         final RequestBody requestBody = new FormBody.Builder()
-                .add("image_encode",  convertToBase64(imageFilePath).trim())
+                //.add("image_encode",  convertToBase64(imageFilePath).trim())
+                .add("image_encode",  "")
                 .add("theposting", edpostingan.getText().toString())
                 .build();
 
-        Log.d("stgp_encode", convertToBase64(imageFilePath).trim());
+        //Log.d("stgp_encode", convertToBase64(imageFilePath).trim());
 
         final okhttp3.Request request = new okhttp3.Request.Builder()
                 .url(Api.JSON_DO_POSTING+"/"+userId)

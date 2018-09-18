@@ -145,6 +145,7 @@ public class LoginActivity extends AppCompatActivity {
 
                             if(gson.message.equals("Ok")){
                                 Log.d("getH", "Ok");
+                                Log.d("trace_iduser", gson.id_resp);
                                 sessionManager.createLoginSession("sess_email",gson.email_resp,gson.id_resp);
                                 Intent gotoHome = new Intent(LoginActivity.this,MainActivity.class);
                                 startActivity(gotoHome);
