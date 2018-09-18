@@ -127,7 +127,7 @@ public class ProfileFragment extends Fragment {
         File newdir = new File(dir);
         newdir.mkdirs();
 
-        starRequestProfile("1");
+        starRequestProfile(sessionManager.getUserDetails().get("post_btnpost_btn"));
 
         mImageView.setOnClickListener(new View.OnClickListener() {
             @Override
